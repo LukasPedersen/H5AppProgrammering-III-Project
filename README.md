@@ -1,12 +1,4 @@
-<!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
 <a name="readme-top"></a>
-<!--
-*** Thanks for checking out the Best-README-Template. If you have a suggestion
-*** that would make this better, please fork the repo and create a pull request
-*** or simply open an issue with the tag "enhancement".
-*** Don't forget to give the project a star!
-*** Thanks again! Now go create something AMAZING! :D
--->
 
 <!-- PROJECT LOGO -->
 <br />
@@ -15,7 +7,7 @@
     <img src="https://github.com/LukasPedersen/H5AppProgrammering-III-Project/assets/61869988/4e13c525-68a4-40d1-9a40-cee90f296759" alt="Logo" width="220" height="220">
   </a>
 
-  <h3 align="center">HumitTemp Watcher README!</h3>
+  <h3 align="center">Chill Watcher README!</h3>
 </div>
 
 
@@ -65,7 +57,9 @@ Der findes nogle Apps der minder om Chill Watcher men her er nogle gode grunde t
 
 ### Built With
 ___
-[<h3 align="left">MAUI</h3> <img src="https://github.com/LukasPedersen/H5AppProgrammering-III-Project/assets/61869988/bdaa047a-7892-4593-9627-39e5e18ecbe9" alt="Logo" width="120" height="120">](https://dotnet.microsoft.com/en-us/apps/maui)
+|  MAUI  |  C#  |  MQTT  |  Minimal API  |   |
+|---|---|---|---|---|
+|  <img src="https://github.com/LukasPedersen/H5AppProgrammering-III-Project/assets/61869988/bdaa047a-7892-4593-9627-39e5e18ecbe9" alt="Logo" width="120" height="120">  |  <img src="https://github.com/LukasPedersen/H5AppProgrammering-III-Project/assets/61869988/b2da569a-06aa-4c5b-95c0-8259c661d7f6" alt="Logo" width="120" height="120">  |  <img src="https://github.com/LukasPedersen/H5AppProgrammering-III-Project/assets/61869988/5b74a28d-3711-42c7-b695-46c6ab36d9d3" alt="Logo" width="155" height="155">| <img src="https://github.com/LukasPedersen/H5AppProgrammering-III-Project/assets/61869988/a6e03e24-9096-4dab-b82e-324a5183ddc2" alt="Logo" width="120" height="120">  |   |
 ___
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -77,7 +71,7 @@ ___
 1. Go to Google play store
 2. Search for Chill Watcher
 3. Install Chill Watcher
-4. Set up senors
+4. Set up sensors
 
 ### Prerequisites
 
@@ -167,7 +161,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 Lukas Nørskov Pedersen - luka0591@elevcampus.dk
 
-Project Link: [[https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)](https://github.com/LukasPedersen/H5AppProgrammering-III-Project)
+Project Link: [LukasPedersen/H5AppProgrammering-III-Project](https://github.com/LukasPedersen/H5AppProgrammering-III-Project)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
