@@ -57,9 +57,9 @@ Der findes nogle Apps der minder om Chill Watcher men her er nogle gode grunde t
 
 ### Built With
 ___
-|  MAUI  |  C#  |  MQTT  |  Minimal API  |   |
+|  MAUI  |  C#  |  MQTT  |  Minimal API  |  InfluxDB  |
 |---|---|---|---|---|
-|  <img src="https://github.com/LukasPedersen/H5AppProgrammering-III-Project/assets/61869988/bdaa047a-7892-4593-9627-39e5e18ecbe9" alt="Logo" width="120" height="120">  |  <img src="https://github.com/LukasPedersen/H5AppProgrammering-III-Project/assets/61869988/b2da569a-06aa-4c5b-95c0-8259c661d7f6" alt="Logo" width="120" height="120">  |  <img src="https://github.com/LukasPedersen/H5AppProgrammering-III-Project/assets/61869988/5b74a28d-3711-42c7-b695-46c6ab36d9d3" alt="Logo" width="155" height="155">| <img src="https://github.com/LukasPedersen/H5AppProgrammering-III-Project/assets/61869988/a6e03e24-9096-4dab-b82e-324a5183ddc2" alt="Logo" width="120" height="120">  |   |
+|  <img src="https://github.com/LukasPedersen/H5AppProgrammering-III-Project/assets/61869988/bdaa047a-7892-4593-9627-39e5e18ecbe9" alt="Logo" width="120" height="120">  |  <img src="https://github.com/LukasPedersen/H5AppProgrammering-III-Project/assets/61869988/b2da569a-06aa-4c5b-95c0-8259c661d7f6" alt="Logo" width="120" height="120">  |  <img src="https://github.com/LukasPedersen/H5AppProgrammering-III-Project/assets/61869988/5b74a28d-3711-42c7-b695-46c6ab36d9d3" alt="Logo" width="155" height="155">| <img src="https://github.com/LukasPedersen/H5AppProgrammering-III-Project/assets/61869988/a6e03e24-9096-4dab-b82e-324a5183ddc2" alt="Logo" width="120" height="120">  |  <img src="https://github.com/LukasPedersen/H5AppProgrammering-III-Project/assets/61869988/a5a46e98-d1fd-486c-9189-0c35e66b3537" alt="Logo" width="120" height="120">  |
 ___
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -78,7 +78,10 @@ ___
 This is an example of how to list things you need to use the software and how to install them.
 * npm
   ```sh
-  Install-Package CommunityToolkit.Mvvm -ProjectName ChillWatcherApp
+  Install-Package CommunityToolkit.Mvvm -ProjectName ChillWathcerApp
+  ```
+  ```sh
+  Install-Package LiveChartsCore.SkiaSharpView.Maui -ProjectName ChillWathcerApp
   ```
 
 ### Installation
@@ -127,34 +130,10 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+<!-- Architecture -->
+## Architecture
 
-
-<!-- CONTRIBUTING -->
-## Contributing
-
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-Don't forget to give the project a star! Thanks again!
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- LICENSE -->
-## License
-
-Distributed under the MIT License. See `LICENSE.txt` for more information.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
+![image](https://github.com/LukasPedersen/H5AppProgrammering-III-Project/assets/61869988/5ff83101-02d8-4e98-ad66-3a93bdbd1cea)
 
 <!-- CONTACT -->
 ## Contact
