@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:model="clr-namespace:ChillWathcerApp.Models"
+             xmlns:viewModel="clr-namespace:ChillWathcerApp.ViewModels"
+             x:Class="ChillWathcerApp.Views.ReadingsView"
+             x:DataType="viewModel:ReadingsViewModel"
+             Title="Readings"
+             xmlns:lvc="clr-namespace:LiveChartsCore.SkiaSharpView.Maui;assembly=LiveChartsCore.SkiaSharpView.Maui"
+             BackgroundColor="#353839">
+    <RefreshView
+        Command="{Binding GetTelemetryCommand}" IsRefreshing="{Binding IsRefreshing}">
+        <VerticalStackLayout>
+            <CollectionView WidthRequest="360" Grid.ColumnSpan="2" ItemsSource="{Binding Telemetries}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="model:Telemetry">
+                        
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+            <Grid Padding="10" >
+                <Frame HeightRequest="125" BackgroundColor="#da4e25">
+                    <Grid>
+                        <lvc:CartesianChart
+                            Series="{Binding Series}">
+                        </lvc:CartesianChart>
+                    </Grid>
+                </Frame>
+            </Grid>
+        </VerticalStackLayout>
+    </RefreshView>
+</ContentPage>

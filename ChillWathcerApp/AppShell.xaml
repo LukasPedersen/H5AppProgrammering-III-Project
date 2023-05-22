@@ -3,12 +3,17 @@
     x:Class="ChillWathcerApp.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:ChillWathcerApp"
-    Shell.FlyoutBehavior="Disabled">
+    xmlns:views="clr-namespace:ChillWathcerApp.Views"
+    Shell.FlyoutBehavior="Disabled"
+    BackgroundColor="#da4e25">
 
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+    <FlyoutItem>
+        <Tab Title="Readings" Route="ReadingsView" Icon="dotnet_bot.png">
+            <ShellContent ContentTemplate="{DataTemplate views:ReadingsView}" Route="ReadingsView"></ShellContent>
+        </Tab>
+        <Tab Title="Controls" Route="ControlsView"  Icon="dotnet_bot.png">
+            <ShellContent ContentTemplate="{DataTemplate views:ControlsView}" Route="ControlsView"></ShellContent>
+        </Tab>
+    </FlyoutItem>
 
 </Shell>
