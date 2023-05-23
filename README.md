@@ -107,12 +107,15 @@ _Below is an example of how you can instruct your audience on installing and set
    git clone https://github.com/LukasPedersen/H5AppProgrammering-III-Project.git
    ```
 3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
+  ```sh
+  Install-Package CommunityToolkit.Mvvm -ProjectName ChillWathcerApp
+  ```
+  ```sh
+  Install-Package LiveChartsCore.SkiaSharpView.Maui -ProjectName ChillWathcerApp
+  ```
+4. Enter your API in `secrets.json`
    ```js
-   const API_KEY = 'ENTER YOUR API';
+   const API_KEY = 'APIKey';
    ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -137,8 +140,8 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 - [ ] Kan vise en graf over målingerne, hvor man kan vælge mellem seneste time, dag og uge.
 - [ ] Der skal være en knap, der via MQTT kan aktivere en servo (og simulere at man åbner et vindue eller tænder for ventilationen).
 - [x] App'en skal opbygges med MVVM design pattern og Dependency Injection.
-- [x] Kan vise seneste data, hvis nettet afbrydes. 
-- [x] Er robust overfor ustabil netforbindelse.
+- [ ] Kan vise seneste data, hvis nettet afbrydes. 
+- [ ] Er robust overfor ustabil netforbindelse.
 - [x] Projektet afleveres i Github med en god Readme-fil og præsenteres for klassen. Readme-filen markerer også hvilke mål, der er nået.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
