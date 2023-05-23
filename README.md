@@ -31,8 +31,6 @@
     </li>
     <li><a href="#usage">Usage</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
@@ -63,8 +61,23 @@ ___
 ___
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-
+<!-- Topics -->
+## Topics
+---
+| Topic | Type | Body | Description |
+|---|---|---|---|
+| devices/<deviceID>/messages/devicebound | Subscribe | ```{ "LED": "ON" }``` | Tell device to turn LED ON or OFF |
+| devices/<deviceID>/messages/devicebound | Subscribe | ```{ "Servo": 120 }``` | Tell device to turn Servo to x degrees |
+| devices/<deviceID>/messages/telemetry | Publish | ```{ "temperature": 25.5, "humidity": 68.2 }``` | Send telemetry to broker |
+---
+<!-- Api Endpoints -->
+## Api Endpoints
+| Endpoint | Type |
+|---|---|
+| /setLED | POST |
+| /setServo | POST |
+| /createTelemetry | POST |
+| /getTelemetry | GET |
 <!-- GETTING STARTED -->
 ## Getting Started
 
@@ -123,10 +136,10 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 - [ ] Kan vise aktuel (seneste måling) af temperatur og humidity og de målte tidspunkter i lokal tid
 - [ ] Kan vise en graf over målingerne, hvor man kan vælge mellem seneste time, dag og uge.
 - [ ] Der skal være en knap, der via MQTT kan aktivere en servo (og simulere at man åbner et vindue eller tænder for ventilationen).
-- [ ] App'en skal opbygges med MVVM design pattern og Dependency Injection.
-- [ ] Kan vise seneste data, hvis nettet afbrydes. 
-- [ ] Er robust overfor ustabil netforbindelse.
-- [ ] Projektet afleveres i Github med en god Readme-fil og præsenteres for klassen. Readme-filen markerer også hvilke mål, der er nået.
+- [x] App'en skal opbygges med MVVM design pattern og Dependency Injection.
+- [x] Kan vise seneste data, hvis nettet afbrydes. 
+- [x] Er robust overfor ustabil netforbindelse.
+- [x] Projektet afleveres i Github med en god Readme-fil og præsenteres for klassen. Readme-filen markerer også hvilke mål, der er nået.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
