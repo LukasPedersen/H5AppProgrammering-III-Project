@@ -16,9 +16,10 @@ namespace ChillWathcerApp.Services
             this._httpClient = new HttpClient();
         }
 
-        public async Task<List<Telemetry>> GetReadings()
+        public async Task<List<Telemetry>> GetReadings(TimeSpan _from, TimeSpan _to)
         {
-            return await _httpClient.GetFromJsonAsync<List<Telemetry>>("https://8z2xzcd8-7117.euw.devtunnels.ms/getTelemetry");
+            List<Telemetry> readings = await _httpClient.GetFromJsonAsync<List<Telemetry>>("https://v4vvfrtc-7117.euw.devtunnels.ms/getTelemetry");
+            return readings.Where(from => from.Time.TimeOfDay >= _from).Where(to => to.Time.TimeOfDay <= _to).ToList();
         }
     }
 }

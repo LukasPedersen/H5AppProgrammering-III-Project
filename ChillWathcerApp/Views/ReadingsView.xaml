@@ -7,24 +7,42 @@
              x:DataType="viewModel:ReadingsViewModel"
              Title="Readings"
              xmlns:lvc="clr-namespace:LiveChartsCore.SkiaSharpView.Maui;assembly=LiveChartsCore.SkiaSharpView.Maui"
-             BackgroundColor="#353839">
+             BackgroundColor="#da4e25">
     <RefreshView
         Command="{Binding GetTelemetryCommand}" IsRefreshing="{Binding IsRefreshing}">
-        <VerticalStackLayout>
-            <CollectionView WidthRequest="360" Grid.ColumnSpan="2" ItemsSource="{Binding Telemetries}">
-                <CollectionView.ItemTemplate>
-                    <DataTemplate x:DataType="model:Telemetry">
-                        
-                    </DataTemplate>
-                </CollectionView.ItemTemplate>
-            </CollectionView>
+        <VerticalStackLayout x:DataType="viewModel:ReadingsViewModel">
+            <Grid Padding="10" HeightRequest="120">
+                <Frame BackgroundColor="#353839">
+                    <Grid>
+                        <Grid.RowDefinitions >
+                            <RowDefinition Height="20"></RowDefinition>
+                            <RowDefinition Height="40"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Label TextColor="White" HorizontalTextAlignment="Center" Text="From" Grid.Column="0" Grid.Row="0"></Label>
+                        <TimePicker TextColor="White" PropertyChanged="TimePicker_PropertyChanged" Time="{Binding SelectedFromTime}" Grid.Column="0" Grid.Row="1"></TimePicker>
+                        <Label TextColor="White" HorizontalTextAlignment="Center" Text="To" Grid.Column="1" Grid.Row="0"></Label>
+                        <TimePicker TextColor="White" PropertyChanged="TimePicker_PropertyChanged" Time="{Binding SelectedToTime}" Grid.Column="1" Grid.Row="1"></TimePicker>
+                    </Grid>
+                </Frame>
+            </Grid>
             <Grid Padding="10" >
-                <Frame HeightRequest="125" BackgroundColor="#da4e25">
+                <Frame HeightRequest="125" BackgroundColor="#353839">
                     <Grid>
                         <lvc:CartesianChart
-                            Series="{Binding Series}">
+                            Series="{Binding Series}"
+                            XAxes="{Binding XAxes}"
+                            YAxes="{Binding YAxes}">
                         </lvc:CartesianChart>
                     </Grid>
+                </Frame>
+            </Grid>
+            <Grid Padding="10">
+                <Frame HeightRequest="320" BackgroundColor="#353839">
+                    
                 </Frame>
             </Grid>
         </VerticalStackLayout>

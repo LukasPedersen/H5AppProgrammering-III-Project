@@ -2,40 +2,36 @@ using ChillWathcerApp.ViewModels;
 using LiveChartsCore.SkiaSharpView;
 using LiveChartsCore;
 using ChillWathcerApp.Models;
+using System.Collections.ObjectModel;
 
 namespace ChillWathcerApp.Views;
 
 public partial class ReadingsView : ContentPage
 {
-	public readonly ReadingsViewModel ReadingsViewModel;
+	public readonly ReadingsViewModel readingsViewModel;
     
     public ReadingsView(ReadingsViewModel model)
 	{
 		InitializeComponent();
-		ReadingsViewModel = model;
-		BindingContext = ReadingsViewModel;
+		readingsViewModel = model;
+		BindingContext = readingsViewModel;
 	}
 
     protected override void OnAppearing()
     {
         base.OnAppearing();
-		ReadingsViewModel.GetTelemetryCommand.Execute(null);
-
-        List<double> temps = new List<double>();
-        List<double> humits = new List<double>();
-
-        foreach (Telemetry tele in ReadingsViewModel.Telemetries)
-        {
-            temps.Add(tele.Temperature);
-            humits.Add(tele.Humidity);
+		if (readingsViewModel != null && readingsViewModel != null)
+		{
+            readingsViewModel.GetTelemetryCommand.Execute(null);
+            readingsViewModel.UpdateChartCommand.Execute(null);
         }
-        ReadingsViewModel.Series = new ISeries[]
-        {
-            new LineSeries<double>
-            {
-                Values = temps.ToArray(),
-                Fill = null
-            }
-        };
+    }
+
+    private void TimePicker_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
+    {
+		if (readingsViewModel != null)
+		{
+			readingsViewModel.UpdateChartCommand.Execute(null);
+		}
     }
 }
