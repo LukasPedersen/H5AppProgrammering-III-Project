@@ -66,9 +66,9 @@ ___
 ---
 | Topic | Type | Body | Description |
 |---|---|---|---|
-| devices/<deviceID>/messages/devicebound | Subscribe | ```{ "LED": "ON" }``` | Tell device to turn LED ON or OFF |
-| devices/<deviceID>/messages/devicebound | Subscribe | ```{ "Servo": 120 }``` | Tell device to turn Servo to x degrees |
-| devices/<deviceID>/messages/telemetry | Publish | ```{ "temperature": 25.5, "humidity": 68.2 }``` | Send telemetry to broker |
+| devices/```deviceId```/messages/devicebound | Subscribe | ```{ "LED": "ON" }``` | Tell device to turn LED ON or OFF |
+| devices/```deviceId```/messages/devicebound | Subscribe | ```{ "Servo": 120 }``` | Tell device to turn Servo to x degrees |
+| devices/```deviceId```/messages/telemetry | Publish | ```{ "temperature": 25.5, "humidity": 68.2 }``` | Send telemetry to broker |
 ---
 <!-- Api Endpoints -->
 ## Api Endpoints
@@ -101,7 +101,7 @@ This is an example of how to list things you need to use the software and how to
 
 _Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
 
-1. Get a free API Key at [https://example.com](https://example.com)
+1. Get a free API Key at https://eu-central-1-1.aws.cloud2.influxdata.com/orgs/b8fb8b6306ae7726/load-data/tokens
 2. Clone the repo
    ```sh
    git clone https://github.com/LukasPedersen/H5AppProgrammering-III-Project.git
