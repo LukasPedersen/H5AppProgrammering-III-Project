@@ -136,8 +136,8 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 <!-- ROADMAP -->
 ## Roadmap
 
-- [ ] Kan vise aktuel (seneste måling) af temperatur og humidity og de målte tidspunkter i lokal tid
-- [ ] Kan vise en graf over målingerne, hvor man kan vælge mellem seneste time, dag og uge.
+- [x] Kan vise aktuel (seneste måling) af temperatur og humidity og de målte tidspunkter i lokal tid
+- [x] Kan vise en graf over målingerne, hvor man kan vælge mellem seneste time, dag og uge.
 - [ ] Der skal være en knap, der via MQTT kan aktivere en servo (og simulere at man åbner et vindue eller tænder for ventilationen).
 - [x] App'en skal opbygges med MVVM design pattern og Dependency Injection.
 - [ ] Kan vise seneste data, hvis nettet afbrydes. 
