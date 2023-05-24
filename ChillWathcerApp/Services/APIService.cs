@@ -18,7 +18,7 @@ namespace ChillWathcerApp.Services
 
         public async Task<List<Telemetry>> GetReadings(TimeSpan _from, TimeSpan _to)
         {
-            List<Telemetry> readings = await _httpClient.GetFromJsonAsync<List<Telemetry>>("https://v4vvfrtc-7117.euw.devtunnels.ms/getTelemetry");
+            List<Telemetry> readings = await _httpClient.GetFromJsonAsync<List<Telemetry>>("https://d200pq9t-7117.euw.devtunnels.ms/getTelemetry");
             return readings.Where(from => from.Time.TimeOfDay >= _from).Where(to => to.Time.TimeOfDay <= _to).ToList();
         }
     }

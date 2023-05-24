@@ -30,19 +30,39 @@
                 </Frame>
             </Grid>
             <Grid Padding="10" >
-                <Frame HeightRequest="125" BackgroundColor="#353839">
+                <Frame HeightRequest="230" BackgroundColor="#353839" HorizontalOptions="End">
                     <Grid>
+                        
                         <lvc:CartesianChart
-                            Series="{Binding Series}"
+                            HeightRequest="200"
+                            ScaleY="1"
+                            ZoomMode="X"
+                            TooltipTextSize="30"
+                            TooltipPosition="Center"
+                            Series="{Binding SeriesTH}"
                             XAxes="{Binding XAxes}"
                             YAxes="{Binding YAxes}">
                         </lvc:CartesianChart>
+                        <Label TextColor="IndianRed" Text="Temperature" VerticalOptions="End"></Label>
+                        <Label TextColor="LightSkyBlue" Text="Humidity" HorizontalOptions="End" VerticalOptions="End"></Label>
                     </Grid>
                 </Frame>
             </Grid>
             <Grid Padding="10">
-                <Frame HeightRequest="320" BackgroundColor="#353839">
-                    
+                <Frame HeightRequest="290" BackgroundColor="#353839">
+                    <Grid>
+                        <Label Text="Latest reading" HorizontalOptions="Center" TextColor="White"></Label>
+                        <lvc:PieChart
+                            Padding="15"
+                            LegendTextSize="40"
+                            Series="{Binding SeriesPie}"
+                            TooltipTextSize="30"
+                            TooltipPosition="Center"
+                            InitialRotation="90"
+                            MaxAngle="360"
+                            Total="100">
+                        </lvc:PieChart>
+                    </Grid>
                 </Frame>
             </Grid>
         </VerticalStackLayout>

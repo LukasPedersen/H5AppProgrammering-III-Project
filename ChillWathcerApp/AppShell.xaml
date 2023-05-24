@@ -8,10 +8,10 @@
     BackgroundColor="#353839">
 
     <FlyoutItem>
-        <Tab Title="Readings" Route="ReadingsView" Icon="dotnet_bot.png">
+        <Tab Title="Readings" Route="ReadingsView" Icon="temperature.svg">
             <ShellContent ContentTemplate="{DataTemplate views:ReadingsView}" Route="ReadingsView"></ShellContent>
         </Tab>
-        <Tab Title="Controls" Route="ControlsView"  Icon="dotnet_bot.png">
+        <Tab Title="Controls" Route="ControlsView"  Icon="wrench">
             <ShellContent ContentTemplate="{DataTemplate views:ControlsView}" Route="ControlsView"></ShellContent>
         </Tab>
     </FlyoutItem>

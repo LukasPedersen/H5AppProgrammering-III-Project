@@ -1,9 +1,14 @@
+using ChillWathcerApp.ViewModels;
+
 namespace ChillWathcerApp.Views;
 
 public partial class ControlsView : ContentPage
 {
-	public ControlsView()
+	public readonly ControlViewModel viewModel;
+	public ControlsView(ControlViewModel model)
 	{
 		InitializeComponent();
+		viewModel = model;
+		BindingContext = viewModel;
 	}
 }

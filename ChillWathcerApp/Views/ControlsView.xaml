@@ -1,12 +1,32 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:model="clr-namespace:ChillWathcerApp.Models"
+             xmlns:viewModel="clr-namespace:ChillWathcerApp.ViewModels"
              x:Class="ChillWathcerApp.Views.ControlsView"
-             Title="ControlsView">
+             x:DataType="viewModel:ControlViewModel"
+             Title="ControlsView"
+             xmlns:lvc="clr-namespace:LiveChartsCore.SkiaSharpView.Maui;assembly=LiveChartsCore.SkiaSharpView.Maui"
+             BackgroundColor="#da4e25">
     <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+        <Grid Padding="10" HeightRequest="120">
+            <Label Text="Red LED"></Label>
+            <Label Text="Green LED" HorizontalOptions="End"></Label>
+            <Switch VerticalOptions="Center" HorizontalOptions="Start"></Switch>
+            <Switch VerticalOptions="Center" HorizontalOptions="End"></Switch>
+        </Grid>
+        <Grid HeightRequest="230" BackgroundColor="#353839">
+            <lvc:PieChart
+                    Series="{Binding Series}"
+                    InitialRotation="180"
+                Padding="10"
+                    MaxAngle="180"
+                    Total="{Binding SliderVal}">
+            </lvc:PieChart>
+            <Slider Value="{Binding SliderVal}" VerticalOptions="End" Minimum="0" Maximum="180"></Slider>
+        </Grid>
+        <Grid>
+            
+        </Grid>
     </VerticalStackLayout>
 </ContentPage>
